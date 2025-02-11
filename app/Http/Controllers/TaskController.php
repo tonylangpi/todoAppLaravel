@@ -21,7 +21,7 @@ class TaskController extends Controller
         $task->title = $request->input('task_name');
         $task->description = $request->input('task_description');
         $task->due_date = now();
-        $task->status = 1;
+        $task->status = 0;
         $task->person_id = $personId;
         $task->save();
 
@@ -57,7 +57,7 @@ class TaskController extends Controller
             return response()->json(['message' => 'No tasks found for this person'], 404);
         }
 
-        return response()->json($tasks, 200);
+        return response()->json(['tasks'=> $tasks], 200);
     }
 
 }

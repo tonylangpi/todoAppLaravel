@@ -132,9 +132,9 @@ class PersonController extends Controller
         if (!$person) {
             $data = [
                 'message' => 'Credenciales incorrectas',
-                'status' => 401
+                'status' => 200
             ];
-            return response()->json($data, 401);
+            return response()->json($data, 200);
         }
 
         $data = [

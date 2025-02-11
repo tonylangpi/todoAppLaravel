@@ -8,7 +8,7 @@ use App\Http\Controllers\TaskController;
 Route::get('/persons',[PersonController::class, 'index']);
 Route::post('/createPerson', [PersonController::class, 'store']);
 Route::put('/updatePerson/{id}', [PersonController::class, 'update']);
-Route::get('/login', [PersonController::class, 'login']);
+Route::post('/login', [PersonController::class, 'login']);
 
 
 //routes for tasks of users
